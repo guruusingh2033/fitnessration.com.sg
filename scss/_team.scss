@@ -1,0 +1,91 @@
+/* Team page 
+************************************************/
+
+.teampage {
+
+	main > section {
+		padding-bottom: 10px;
+	}
+
+	h1 {
+		// font-size: 30px;
+	}
+
+	h2 {
+		font-size: 30px
+	}
+
+	h4 {
+		font-size: 18px;
+		line-height: 26px;
+		color: $orange;
+	}
+
+	h5 {
+		font-family: 'Mission Gothic';
+	}
+
+	h5, .content p {
+		font-size: 14px;
+		line-height: 18px;
+		margin-bottom: 20px;
+	}
+	
+	#team .intro {
+		padding-top: 73px;
+		background: url('../images/iconteam-orange.svg') top center no-repeat;
+		background-size: 94px 60px;
+	}
+
+	.content {
+		position: relative;
+		.question {
+			font-size: 12px;
+		}
+		p {
+			color: #A0A0A0;
+			height: calc(6 * 18px);
+			overflow-y: hidden;
+		}
+	}
+}
+
+
+/* Desktop only 
+************************************************/
+
+@media screen and (min-width:960px) {
+
+	.teampage {
+
+		main > section:not(.title) {
+			padding-right: 160px;
+			padding-left: 160px;
+			@include boxsizing(border-box);
+		}
+
+		.teammember:first-of-type:last-of-type {
+			float: none;
+			margin: 0 auto;
+		}
+	}
+}
+
+
+/* Mobile 
+************************************************/
+
+@media screen and (max-width:959px) {
+
+	.teampage {
+
+		#team .intro {
+			padding-top: 53px;
+			background-size: 63px 40px;
+		}
+
+		section:nth-of-type(n+3) {
+			@include bgfullwidth(border-top, 1px solid $greylt3);
+		}
+	}
+}

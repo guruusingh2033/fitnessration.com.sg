@@ -1,0 +1,76 @@
+
+Functionality
+
+toggle lean/heavy tabs and him/her tabs --no longer works on Food page
+
+popup functionality on menu page & addons page
+
+form functionality on career & business/events pages
+
+-----------
+
+All pages
+
+test across browsers & devices
+Chrome 52.0 - no issues (developed here)
+Firefox 47.0.1 - no issues (not leaving space for some images, but I assume this will be fine when there are real images there)
+Safari 9.1.1 - no issues
+IE/Edge - still need to test
+IOS 9.3.3
+	Safari, Chrome, Firefox - no issues
+Android 6.0.1
+	Chrome - no issues
+	Ff - links with anchors don't go to right part of page only on team page, e.g. /team.php#chefs goes to bottom of page
+
+
+anchor padding top
+
+clean up content text characters (when have final content)
+
+add missing links, e.g., order now
+
+-----------
+
+Elements
+
+font stacks?
+
+alternate2colums vertically center text desktop
+
+-----------
+
+Header
+
+mobile open/close navigation functionality
+
+-----------
+
+Landing page
+
+Instagram feed for Hype section
+
+-----------
+
+Food page
+
+alt2cols images below text or between text on mobile (is this there a reason it was designed this way?)
+
+-----------
+
+Nutrition page
+
+table darken odd rows backgroundcolor
+
+table fix first row & col mobile scroll
+
+-----------
+
+Addons page
+
+mobile hide overflowing text on cards
+
+-----------
+
+Business page
+
+textarea word limit

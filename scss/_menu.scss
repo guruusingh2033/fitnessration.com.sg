@@ -1,0 +1,225 @@
+/* Menu page 
+************************************************/
+
+.menupage {
+
+	.tabs {
+		margin-top: 35px;
+		margin-bottom: 0;
+	}
+
+	#menu .intro {
+		padding-top: 73px;
+		background: url('../images/iconmenu-orange.svg') top center no-repeat;
+		background-size: 107px 60px;
+	}
+
+	main > section {
+		padding-bottom: 0;
+
+		& > section {
+			padding: 60px 0;
+
+			&:nth-of-type(2n) {
+				@include bgfullwidth(background-color, $peachdk);
+			}
+		}
+	}
+
+	.card-4col {
+		height: 460px;
+		color: $greylt8;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		picture {
+			display: block;
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+			width: 300px;
+			height: 300px;
+			margin-bottom: 12px;
+		}
+
+		h4 {
+			font-size: 17px;
+			// line-height: 36px;
+			margin-bottom: 10px;
+			font-weight: 700;
+		}
+
+		ul {
+			font-size: 12px;
+			line-height: 16px;
+			margin-bottom: 25px;
+		}
+
+		a {
+			font-size: 15px;
+			line-height: 20px;
+			color: $greylt6;
+		}
+	}
+
+	.popup {
+
+		h4 {
+			margin-bottom: 16px;
+		}
+
+		& > p:last-of-type {
+			margin-bottom: 0;
+			padding-bottom: 28px;
+			border-bottom: 1px solid $greylt5;
+		}
+
+		.content {
+			height: 110px;
+			float: left;
+			padding: 15px;
+			border-top: none;
+			border-right: 1px solid $greylt5;
+
+			&:first-of-type {
+				padding-left: 23px;
+			}
+
+			&:last-of-type {
+				position: relative;
+				border-right: none;
+			}
+
+			p {
+				width: 115px;
+			}
+
+			span:after {
+				content: '';
+				position: absolute;
+				bottom: 20px;
+				background-color: $greylt9;
+				@include borderradius(100%);
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+
+			&.ingredients .icons picture {
+				@include borderradius(100%);
+				display: block;
+				width: 34px;
+				height: 34px;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-color: #DEE0E4;
+				@include backgroundimagecolors(('000000':'6A6A6A'));
+				background-size: 20px 20px;
+			}
+		}
+
+		table {
+
+			td:first-child  {
+				text-align: right;
+			}
+
+			td:last-child {
+				padding-left: 10px;
+				font-weight: 400;
+			}
+		}
+	}
+}
+
+
+/* Mobile 
+************************************************/
+
+@media screen and (max-width:959px) {
+
+	.menupage {
+
+		.tabs {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		
+		#menu .intro {
+			padding-top: 53px;
+			background-size: 71px 40px;
+		}
+
+		main > section > section {
+			padding: 30px 0;
+		}
+
+		.card-4col {
+			height: 100px;
+			margin-bottom: 10px;
+			background-color: $white;
+			border: 1px solid $greylt3;
+			@include borderradius(10px);
+			overflow: hidden;
+		
+			picture {
+				width: 88px;
+				height: 100px;
+				float: left;
+				margin-right: 17px;
+				margin-bottom: 0;
+				border-right: 1px solid $greylt3;
+			}
+
+			h4 {
+				font-size: 14px;
+				line-height: 18px;
+				margin-top: 13px;
+				margin-right: 10px;
+				margin-bottom: 5px;
+			}
+
+			ul {
+				font-size: 11px;
+				line-height: 14px;
+				margin-right: 8px;
+				margin-bottom: 0;
+			}
+
+			a {
+				display: none;
+			}
+		}
+
+		.popup {
+
+			.content {
+				height: 64px;
+				border-right: none;
+
+				&:last-of-type {
+					width: calc(100% - 30px);
+					height: auto;
+					border-top: 1px solid $greylt5;
+				}
+
+				p {
+					width: 110px;
+				}
+
+				&.ingredients .icons picture {
+					width: 27px;
+					height: 27px;
+					@include backgroundimagecolors(('000000':'919294'));
+					background-size: 18px 18px;
+				}
+			}
+
+			p + .content {
+				padding-left: 15px;
+				border-right: 1px solid $greylt5;
+			}
+		}
+	}
+}

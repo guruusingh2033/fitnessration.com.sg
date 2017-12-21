@@ -1,0 +1,97 @@
+//* Variables
+//************************************************/
+
+// fonts
+
+$leaguespartan: 'League Spartan', sans-serif;
+$missiongothic: 'Mission Gothic', sans-serif;
+$lato: 'Lato', sans-serif;
+
+
+// colors
+
+$peach: #FBF4ED;
+$peachdk: #FAE9D9;
+$greydk: #3A3E42;
+$grey: #919294;
+$greylt: #BBBDBF;
+$greylt2: #B7BBC0;
+$greylt3: #DEE0E4;
+$greylt4: #E1E1E1;
+$greylt5: #D9D9D9;
+$greylt6: #A0A0A0;
+$greylt7: #ECECEC;
+$greylt8: #6A6A6A;
+$greylt9: #E6E6E6;
+$greyblue: #7392B7;
+$orange: #EC5623;
+$white: #FFFFFF;
+$shadow: rgba(0, 0, 0, 0.3);
+
+
+
+// Mixins
+//************************************************
+
+@mixin image() {
+	display: block;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+@mixin backgroundimagecolors($colors) {
+	$colorStr: '';
+	@each $originalColor, $newColor in $colors {
+		$colorStr: $colorStr + $originalColor + '=' + $newColor + '&';
+	}
+	list-style-image: url($image-server-url + '/color.php?' + $colorStr);
+}
+
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin borderradius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin boxsizing($boxval) {
+	-webkit-box-sizing: $boxval;
+	-moz-box-sizing: $boxval;
+	box-sizing: $boxval;
+}
+
+@mixin boxshadow($shadowval) {
+	-webkit-box-shadow: $shadowval;
+	-moz-box-shadow: $shadowval;
+	box-shadow: $shadowval;
+}
+
+@mixin transform($transformation) {
+	-webkit-transform: $transformation;
+	-moz-transform: $transformation;
+	transform: $transformation;
+}
+
+@mixin bgfullwidth($bgprop, $value) {
+	position: relative;
+
+	&:before {
+		content: '';
+		width: 100vw;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		@include transform(translateX(-50%));
+		z-index: -1;
+		#{$bgprop}: $value;
+	}
+}

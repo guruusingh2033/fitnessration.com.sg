@@ -1,0 +1,8 @@
+/includes/config.php
+/styl/_config.styl
+/css/**/*.css
+/node_modules
+/prepros.cfg
+/scss/_config.scss
+/js/config.js
+/vendor/

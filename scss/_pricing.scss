@@ -1,0 +1,116 @@
+/* Pricing page 
+************************************************/
+
+.pricingpage {
+
+	#pricing .intro {
+		padding-top: 73px;
+		background: url('../images/iconpricing-orange.svg') top center no-repeat;
+		background-size: 60px 61px;
+	}
+
+	.card-4col {
+		padding-top: 93px;
+		text-align: center;
+		background-color: $white;
+		background-size: 45px 54px;
+		background-position: center 26px;
+		background-repeat: no-repeat;
+		border: 1px solid $greylt3;
+		@include borderradius(10px);
+		@include boxsizing(border-box);
+		overflow: hidden;
+
+		@include backgroundimagecolors(('000000':'EC5623'));
+
+		&.five {
+			background-image: url('../images/iconkettlebell5-orange.png');
+		}
+
+		&.ten {
+			background-image: url('../images/iconkettlebell10-orange.png');
+		}
+
+		&.fifteen {
+			background-image: url('../images/iconkettlebell15-orange.png');
+		}
+
+		h4 {
+			margin-bottom: 25px;
+			font-family: $leaguespartan;
+			font-size: 21px;
+			line-height: 31px;
+			font-weight: 700;
+			color: $orange;
+		}
+
+		div {
+			margin-bottom: 20px;
+			font-size: 14px;
+			line-height: 18px;
+		}
+
+		.pricebundle {
+			position: relative;
+			font-size: 15px;
+			line-height: 19px;
+			font-weight: 700;
+			color: $grey;
+
+			span {
+				font-family: $leaguespartan;
+				font-size: 32px;
+				line-height: 32px;
+				display: block;
+
+				&.usd {
+					position: absolute;
+					top: -3px;
+					left: 83px;
+					font-family: $missiongothic;
+					font-size: 12px;
+					line-height: 16px;
+				}
+			}
+		}
+
+		.pricemeal {
+			font-weight: 700;
+			margin-bottom: 27px;
+		}
+
+		a {
+			display: block;
+			font-size: 12px;
+			line-height: 52px;
+			font-family: $leaguespartan;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: $white;
+			background-color: $orange;
+		}
+	}
+}
+
+
+/* Desktop only 
+************************************************/
+
+@media screen and (min-width:960px) {
+	
+	.pricingpage .banner {
+		display: none;
+	}
+}
+
+
+/* Mobile 
+************************************************/
+
+@media screen and (max-width:959px) {
+
+	.pricingpage #pricing .intro {
+		padding-top: 53px;
+		background-size: 40px 40px;
+	}
+}

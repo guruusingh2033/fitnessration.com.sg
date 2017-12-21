@@ -1,0 +1,124 @@
+/* Food page 
+************************************************/
+
+.foodpage {
+
+	#food .intro {
+		padding-top: 73px;
+		background: url('../images/iconfood-orange.svg') top center no-repeat;
+		background-size: 57px 60px;
+	}
+
+	#heating table {
+		font-family: $missiongothic;
+		font-size: 16px;
+		line-height: 21px;
+		font-style: italic;
+
+		th {
+			text-align: left;
+		}
+
+		td {
+			padding-right: 10px;
+		}
+	}
+
+	#mealplans {
+		h2 {
+			margin-bottom: 30px;
+		}
+
+		.content {
+			h1 {
+				font-weight: 700;
+				font-size: 18px;
+				font-style: italic;
+				color: #3A3E42;
+				text-transform: none;
+				text-align: left;
+				line-height: normal;
+			}
+
+			ul {
+				font-family: $missiongothic;
+				font-size: 18px;
+				line-height: 23px;
+				font-style: italic;
+
+				li:before {
+					content: '• ';
+					font-size: 21px;
+				}
+			}
+		}
+	}
+
+	.content p strong {
+		font-family: $leaguespartan;
+		font-size: 24px;
+		line-height: 30px;
+		font-weight: 700;
+	}
+
+	.specs, .footnote {
+		font-size: 18px;
+		line-height: 23px;
+		font-style: italic;
+	}
+
+}
+
+
+/* Mobile 
+************************************************/
+
+@media screen and (max-width:959px) {
+
+	.foodpage {
+
+		#food .intro {
+			padding-top: 53px;
+			background-size: 38px 41px;
+		}
+
+		#science, #heating {
+			padding-bottom: 0;
+		}
+
+		#heating table {
+			font-size: 12px;
+			line-height: 16px;
+		}
+
+
+		#chefs, #chefs ~ section {
+			@include bgfullwidth(border-top, 1px solid $greylt3);
+		}
+
+		.content p {
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			& strong {
+				font-size: 16px;
+			}
+		}
+
+		#mealplans p:last-of-type {
+			margin-top: 6px;
+			margin-bottom: 20px;
+		}
+
+		.specs, .footnote {
+			font-size: 12px;
+			line-height: 16px;
+		}
+
+		.specs li:before {
+			font-size: 12px;
+		}
+	}
+}

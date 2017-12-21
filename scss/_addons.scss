@@ -1,0 +1,176 @@
+/* Addons page 
+************************************************/
+
+.addonspage {
+
+	#addons .intro {
+		padding-top: 73px;
+		background: url('../images/iconaddons-orange.svg') top center no-repeat;
+		background-size: 60px 61px;
+	}
+
+	main > section section {
+		padding: 30px 0;
+
+		&:nth-of-type(2n) {
+			@include bgfullwidth(background-color, $peachdk);
+		}
+	}
+
+	section > p.description {
+		margin-bottom: 50px;
+	}
+
+	.card-4col {
+		color: $greylt8;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		picture {
+			display: block;
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+			width: 300px;
+			height: 300px;
+			margin-bottom: 12px;
+		}
+
+		h4 {
+			font-size: 17px;
+			line-height: 36px;
+			font-weight: 700;
+		}
+
+		p {
+			font-size: 12px;
+			line-height: 16px;
+
+			&:last-of-type {
+				margin-bottom: 25px;
+			}
+		}
+
+		a {
+			font-size: 15px;
+			line-height: 20px;
+			color: $greylt6;
+		}
+	}
+}
+
+
+
+/* Desktop only 
+************************************************/
+
+@media screen and (min-width:960px) {
+
+	.addonspage {
+
+		h2 {
+			margin-bottom: 20px;
+			text-align: left;
+		}
+
+		main > section {
+			position: relative;
+		}
+
+		.select {
+			position: absolute;
+			top: 110px;
+			right: 0;
+		}
+	}
+}
+
+
+/* Mobile 
+************************************************/
+
+@media screen and (max-width:959px) {
+
+	.addonspage {
+
+		#addons .intro {
+			padding-top: 53px;
+			background-size: 40px 40px;
+		}
+
+		.select {
+			width: 100%;
+		}
+
+		section > p.description {
+			margin-bottom: 30px;
+		}
+		
+		.card-4col {
+			margin-bottom: 10px;
+			background-color: $white;
+			border: 1px solid $greylt3;
+			@include borderradius(10px);
+			overflow: hidden;
+		
+			picture {
+				display: block;
+				width: 96px;
+				height: 96px;
+				margin: 15px auto 13px;
+			}
+
+			h4 {
+				margin-bottom: 10px;
+				font-size: 14px;
+				line-height: 18px;
+				text-align: center;
+			}
+
+			p {
+				margin: 0 20px;
+				line-height: 18px;
+
+				&:last-of-type {
+					margin-bottom: 15px;
+				}
+			}
+
+			a {
+				display: block;
+				font-family: $leaguespartan;
+				font-size: 12px;
+				line-height: 50px;
+				text-align: center;
+				font-weight: 700;
+				text-transform: uppercase;
+				border-top: 1px solid $greylt3;
+			}
+		}
+
+		// .popup {
+
+		// 	.imgwrapper {
+		// 		height: calc(210px - 36px);
+		// 		padding-top: 36px;
+		// 		background-color: $white;
+		// 		border-bottom: 1px solid $greylt3;;
+		// 	}
+
+		// 	picture {
+		// 		display: block;
+		// 		width: 140px;
+		// 		height: 140px;
+		// 		margin: 0 auto;
+		// 		border: 1px solid $greylt2;
+		// 	}
+
+		// 	p {
+		// 		margin-right: 0;
+		// 		margin-left: 0;
+		// 	}
+		// }
+	}
+}

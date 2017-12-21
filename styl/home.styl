@@ -1,0 +1,355 @@
+@import '_header'
+$orange = #EC5623
+
+@keyframes bounce
+  0%, 20%, 50%, 80%, 100%
+    transform translateY(0)
+  40%
+    transform translateY(-10px)
+  60%
+    transform translateY(-5px)
+
+main .smart-food
+	d-background url(../images/landing/smart-food.png) no-repeat top center
+
+main
+	*
+		box-sizing border-box
+		line-height normal
+	.smart-food
+		position relative
+		width auto
+		height 487px
+		background-size cover
+		text-align center
+		display flex
+		flex-wrap wrap
+		align-content center
+		justify-content center
+		overflow hidden
+		*
+			position relative
+			z-index 1
+		video
+			position absolute
+			height 100%
+			top 0
+			left 0
+			right 0
+			margin auto
+			width 100%
+			object-fit cover
+			z-index 0
+		.scroll-down
+			animation bounce 4s 2s infinite
+			width 46px
+			height 26px
+			background-image url(../images/scroll-down.png)
+			background-size contain
+			position absolute
+			bottom 87px
+			left 0
+			right 0
+			margin auto
+			
+		h1
+			width 100%
+			margin-bottom 11px
+			line-height normal
+			r-font-size 30px 20px
+			color white
+			text-transform none
+			font-weight normal
+			strong
+				display block
+				text-transform uppercase
+				r-font-size 40px 26px
+				font-weight bold
+				m-color $orange
+		a
+			border-radius 30px
+			r-width 200px 138px
+			height 40px
+			& + a
+				r-margin-left 29px 10px
+			&.order
+				r-font-size 15px 12px
+				text-align center
+				line-height 40px*1.08
+				text-transform uppercase
+				color white
+				background-color #EC5623
+			&.play-video
+				font-size 0
+				border 2px solid #EC5623
+				background url(../images/landing/play.png) no-repeat center
+			
+	.aspirations
+		.feature
+			d-width 290px
+			height 100px
+			r-padding 26px 0 0 47px, 26px 0 0 100px
+			font-size 18px
+			font-weight bold
+			color #EC5623
+			r-background no-repeat center left, no-repeat center left 10px
+			display block
+			text-align center
+
+			a
+				color #7392B7
+				text-transform uppercase
+				display block
+				font-size 14px
+				font-family 'Mission Gothic'
+				font-weight normal
+			&.super-shelf-life
+				background-image url(../images/landing/super-shelf-life.png)
+			&.complete-meals
+				d-margin-left auto
+				background-image url(../images/landing/complete-meals.png)
+				
+	.perfect-portions
+			.meal-type, .portion-sizes
+				width 138px
+				height 72px
+				padding-top 51px
+				margin-top 14px
+				float left
+				color $orange
+				text-transform uppercase
+				text-align center
+				font-size 16px
+				font-family 'League Spartan'
+				background-repeat no-repeat
+				background-position top center
+			.meal-type
+				background-image url(../images/landing/meal-type.png)
+			.portion-sizes
+				d-margin-left 76px
+				background-image url(../images/landing/portion-sizes.png)
+
+	+on-desktop()
+		margin-top 97px
+		h2
+			font-size 30px
+			margin 0
+		section
+			padding 0
+			width 960px
+		.aspirations
+			height 416px
+			padding 60px 110px 0
+			text-align center
+			display flex
+			flex-wrap wrap
+			align-content flex-start
+			h2
+				font-size 30px
+				padding 0 51px
+				margin-bottom 9px
+			p
+				width 460px
+				margin 0 auto 40px
+				font-size 18px
+			// .feature
+			// 	width 290px
+			// 	height 100px
+			// 	padding 26px 0 0 47px
+			// 	font-size 18px
+			// 	font-weight bold
+			// 	color #EC5623
+			// 	background no-repeat center left			
+			// 	a
+			// 		color #7392B7
+			// 		text-transform uppercase
+			// 		display block
+			// 		font-size 14px
+			// 		font-family 'Mission Gothic'
+			// 		font-weight normal
+			// 	&.super-shelf-life
+			// 		background-image url(../images/landing/super-shelf-life.png)
+			// 	&.complete-meals
+			// 		margin-left auto
+			// 		background-image url(../images/landing/complete-meals.png)
+		.frozen-is-the-new-fresh
+			height 450px
+			padding 76px 0 0 70px
+			background url(../images/landing/frozen-is-the-new-fresh.gif)
+			background-position 0 -113px
+			color white
+			h2
+				margin-bottom 20px
+				text-transform uppercase
+				text-align left
+			p
+				width 382px
+				font-size 15px
+				font-family 'Mission Gothic'
+				font-weight normal
+			.learn-more
+				display block
+				border-radius 30px
+				border 2px solid white
+				width 150px
+				height 30px
+				text-transform uppercase
+				line-height @height*1.0
+				font-size 12px
+				text-align center
+				color white
+		.full-stacked-benefits, .perfect-portions
+			height 480px
+			background-size contain
+			h2
+				margin-bottom 31px
+				text-transform uppercase
+				text-align left
+			p
+				font-size 15px
+		.full-stacked-benefits
+			padding 82px 60px 0 521px
+			background url(../images/landing/full-stacked-benefits.jpg) no-repeat top left
+			background-size contain
+			.learn-more
+				display block
+				width 150px
+				height 30px
+				margin-top 30px
+				border-radius 30px
+				text-align center
+				line-height @height * 1.07
+				text-transform uppercase
+				font-weight normal
+				font-family 'League Spartan'
+				background $orange
+				color white
+		.perfect-portions
+			padding 82px 521px 0 60px 
+			background url(../images/landing/perfect-portions.gif) #FAE9D9 no-repeat top right
+			background-size contain
+			.meal-type, .portion-sizes
+				width 138px
+				height 72px
+				padding-top 51px
+				margin-top 14px
+				float left
+				color $orange
+				text-transform uppercase
+				text-align center
+				font-size 16px
+				font-family 'League Spartan'
+				background-repeat no-repeat
+				background-position top center
+			.meal-type
+				background-image url(../images/landing/meal-type.png)
+			.portion-sizes
+				margin-left 76px
+				background-image url(../images/landing/portion-sizes.png)
+		.community-series
+			padding 22px 0
+			.be-inspired
+				font-size 30px
+				text-align center
+				font-weight bold
+				text-transform uppercase
+				font-family 'League Spartan'
+			.people
+				display flex
+				li
+					width (960px/3)
+				img
+					margin-bottom 21px
+					width 100%
+				.name, .question
+					display block
+				.question
+					color #A0A0A0
+					font-family 'Mission Gothic'
+					margin-top 10px
+					font-size 12px
+				p
+					font-family 'Mission Gothic'
+					font-size 11.5px
+					padding-right 30px
+	+on-mobile()
+		margin-top 60px
+		display block
+		section
+			padding 0
+			width auto
+			padding 10px 10px 30px
+			
+		.frozen-is-the-new-fresh, .full-stacked-benefits, .perfect-portions
+			padding-top 300px
+			background-repeat no-repeat
+			background-position top center
+			background-size contain
+			h2
+				font-size 21px
+				text-transform uppercase
+				padding 0 10px
+				margin-top 15px
+				
+			.learn-more
+				border 1px solid #3A3E42
+				display block
+				height-vct 40px true
+				text-align center
+				border-radius 20px
+				font-size 12px
+				text-transform uppercase
+				
+			
+		.smart-food
+			height 502px
+		.aspirations
+			.feature
+				border 1px solid #3A3E42
+				border-radius 10px
+				text-align left
+				& + .feature
+					margin-top 10px
+				a
+					margin-top 10px
+					
+		.frozen-is-the-new-fresh
+			background-image url(../images/landing/frozen-is-the-new-fresh.gif)
+			background-size 510px
+			// background-size 663px 299px
+			// background-position top left -268px
+
+		.full-stacked-benefits
+			background-image url(../images/landing/full-stacked-benefits.jpg)
+			padding-top 320px
+			
+		.perfect-portions
+			background-image url(../images/landing/perfect-portions.gif)
+			padding-top 320px
+	
+		.community-series
+			h2
+				margin 0
+			.be-inspired
+				font-size 21px
+				font-weight bold
+				font-family 'League Spartan'
+				text-align center
+				margin 0 0 20px 0
+			li:not(:first-child)
+				margin-top 40px
+			img
+				display block
+				width 320px
+				margin-left -10px
+			.name
+				font-family 'League Spartan'
+				font-size 18px
+				display block
+				color #3A3E42
+				margin 16px 0 9px
+				
+			.question
+				color #A0A0A0
+				font-size 13px
+				font-family 'Mission Gothic'

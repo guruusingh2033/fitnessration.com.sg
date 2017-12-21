@@ -1,0 +1,339 @@
+@import '_header'
+$orange = #EC5623
+main
+	r-margin-top 97px 60px
+	.meal-type
+		&:not(.lean-on-me) div.lean-on-me
+			display none
+		&:not(.heavy-duty) div.heavy-duty
+			display none
+
+	+on-desktop()
+		color #3A3E42
+		*
+			box-sizing border-box
+			line-height normal
+		h2
+			font-size 30px
+			margin 0 0 20px 0
+			text-transform uppercase
+			text-align left
+		section
+			padding 0
+			width 960px
+		p
+			font-size 15px
+			font-family 'Mission Gothic'
+		.header
+			height 518px
+			padding-top 190px
+			h1
+				padding-top 80px
+				background url(../images/new-our-food/chefs-hat.png) no-repeat top 0 center
+				font-size 30px
+		.science-our-responsibility
+			height 563px
+			background url(../images/new-our-food/science-our-responsibility.gif) no-repeat top center
+			background-size cover
+			color white
+			font-size 30px
+			padding 100px 30px 0 400px
+		.healthy-eating-in-minutes
+			color white
+			background black url(../images/new-our-food/healthy-eating-in-minutes.png) no-repeat center right
+			background-size contain
+			height 468px
+			padding 80px 440px 0 50px
+			.read-more
+				color #EC5623
+			.alternative-heating, .tray-specs
+				color #CFCFCF
+				font-style italic
+				font-size 10.5px
+			.alternative-heating
+				margin 10px 0
+				.heating-method
+					display flex
+					.container
+						width 60px
+					.duration
+						width 77px
+			.tray-specs
+				.spec
+					display block
+		.meal-time-is-anytime
+			height 575px
+			background url(../images/new-our-food/meal-time-is-any-time.jpg)
+			color white
+			padding-top 349px 
+			&, h2
+				text-align center
+			h2
+				text-indent 33px
+			p
+				width 414px
+				margin auto
+		.strong-culinary-focus
+			height 492px
+			background url(../images/new-our-food/strong-culinary-focus.jpg) no-repeat top left
+			background-size contain
+			padding 80px 0 0 533px
+		.strong-culinary-focus, .delivered-even-at-night
+			a
+				display block
+				width 254px
+				height 40px
+				line-height @height*1.06
+				border-radius 30px
+				border 2px solid #3A3E42
+				text-align center
+				text-transform uppercase
+		.taste-the-world
+			height 468px
+			background url(../images/new-our-food/taste-the-world.jpg) no-repeat top right #FAE9D9
+			background-size contain
+			padding 80px 520px 0 50px
+		.delivered-even-at-night
+			height 492px
+			background url(../images/new-our-food/delivered-even-at-night.jpg) no-repeat top left #FAE9D9
+			background-size contain
+			padding 76px 25px 0 530px
+		.meal-type
+			height 430px
+			&.lean-on-me
+				background #3BBBB1 url(../images/new-our-food/lean-on-me.png) top 100px right no-repeat
+			&.heavy-duty
+				background #D82458 url(../images/new-our-food/heavy-duty.png) top 110px left 30px no-repeat
+			&:not(.lean-on-me) div.lean-on-me
+				display none
+			&:not(.heavy-duty) div.heavy-duty
+				display none
+			h2
+				text-align center
+			padding-top 30px
+			
+			&.lean-on-me .nav .lean-on-me
+			&.heavy-duty .nav .heavy-duty
+				a
+					border-bottom 2px solid #3A3E42
+					color #3A3E42
+			.nav
+				display flex
+				justify-content center
+				li
+					width 200px
+					a
+						color #9F9F9F
+						border-bottom 2px solid #9F9F9F
+						display block
+						text-align center
+						padding-bottom 9px
+						
+				a
+					text-transform uppercase
+					font-size 17.29px
+			div.lean-on-me, div.heavy-duty
+				color white
+				.specs, .read-more
+					font-size 10px
+					font-style italic
+					font-family 'Mission Gothic'
+					font-weight normal
+				.read-more
+					font-style normal
+				li
+					&:before
+						content '- '
+			div.lean-on-me
+				padding 40px 410px 0 80px
+			div.heavy-duty
+				padding 25px 10px 0 459px
+
+			p
+				strong
+					font-family 'League Spartan'
+		.gender-specific
+			height 500px
+			padding 76px 25px 0 530px
+			background url(../images/new-our-food/gender-specific.png) no-repeat top left #FAE9D9
+			background-size contain
+
+
+	+on-mobile()
+		margin-top 60px
+		display block
+		section
+			padding 0
+			width auto
+			padding 40px 10px 30px
+		.header
+			padding-top 70px
+			h1
+				padding-top 80px
+				background url(../images/new-our-food/chefs-hat.png) no-repeat top 0 center
+				background-size 38px
+				font-size 26px
+		h2
+			text-transform uppercase
+
+		.science-our-responsibility, .healthy-eating-in-minutes, .meal-time-is-anytime
+			background-repeat no-repeat
+			background-position top center
+			
+		.science-our-responsibility
+			background-color black
+			color white
+			background-image url(../images/new-our-food/science-our-responsibility.gif)
+			background-size 347px
+			background-position top left -27px
+			padding-top 195px
+			h2
+				margin-top 13px
+				margin-bottom 10px
+			p
+				text-align center
+			
+		.healthy-eating-in-minutes
+			background-image url(../images/new-our-food/healthy-eating-in-minutes.png)
+			background-size 287px
+			padding-top 291px
+			background-color black
+			color white
+			
+			h2
+				margin-top 13px
+				margin-bottom 10px
+			p
+				text-align center
+				
+			a
+				color #EC5623
+				font-size 18px
+				font-family 'Mission Gothic'
+				
+			text-align center
+				
+			.alternative-heating, .tray-specs
+				width 208px
+				margin 0 auto
+				line-height normal
+				font-family 'Mission Gothic'
+				font-size 11px
+				font-style italic
+				text-align left
+				
+			
+			.alternative-heating
+				.heating-method
+					display flex
+					.container
+						width 60px
+					.duration
+						width 60px
+			
+			.tray-specs
+				margin-top 10px
+				.spec
+					display flex
+					.property
+						width 60px
+		
+		.meal-time-is-anytime
+			padding-top 206px
+			background-image url(../images/new-our-food/meal-time-is-any-time.jpg)
+			background-color white
+			background-size 322px
+
+		.strong-culinary-focus
+			*:nth-child(3)
+				padding-bottom 324px
+				background no-repeat url(../images/new-our-food/strong-culinary-focus.jpg) bottom center
+				background-size contain
+
+			a
+				border 1px solid #3A3E42
+				border-radius 20px
+				display block
+				text-align center
+				height-vct 40px
+				font-size 12px
+				text-transform uppercase
+
+		.taste-the-world
+			border-top 1px solid #DEE0E4
+			*:nth-child(4)
+				padding-bottom 324px
+				background no-repeat url(../images/new-our-food/taste-the-world.jpg) bottom center
+				background-size contain
+
+		.delivered-even-at-night
+			border-top 1px solid #DEE0E4
+			*:nth-child(4)
+				padding-bottom 324px
+				background no-repeat url(../images/new-our-food/delivered-even-at-night.jpg) bottom center
+				background-size contain
+			a
+				border 1px solid #3A3E42
+				border-radius 20px
+				display block
+				text-align center
+				height-vct 40px
+				font-size 12px
+				text-transform uppercase
+				
+		.meal-type
+			border-top 1px solid #DEE0E4
+			&.heavy-duty .nav .heavy-duty
+			&.lean-on-me .nav .lean-on-me
+				a
+					border-bottom 2px solid #3A3E42
+					color #3A3E42
+
+			>.lean-on-me, > .heavy-duty
+				padding-top 300px
+				background-repeat no-repeat
+				background-size contain
+				background-position top center
+				&.heavy-duty
+					background-image url(../images/new-our-food/heavy-duty.png)
+				&.lean-on-me
+					background-image url(../images/new-our-food/lean-on-me.png)
+
+			.nav
+				display flex
+				margin-bottom 27px
+				li
+					flex-grow 1
+
+				a
+					display block
+					height-vct 40px
+					text-align center
+					font-size 12px
+					text-transform uppercase
+					border-bottom 1px solid #DEE0E4
+					color #919294
+			
+			.read-more
+				display none
+				
+			.specs
+				font-family 'Mission Gothic'
+				font-style italic 
+				h3
+					font-size 12px
+					font-weight bold
+				li
+					line-height normal
+					font-size 12px
+					&:before
+						content '\2022'
+						margin-right 4px
+						
+		.gender-specific
+			border-top 1px solid #DEE0E4
+			*:nth-child(4)
+				padding-bottom 324px
+				background no-repeat url(../images/new-our-food/gender-specific.png) bottom center
+				background-size contain
+

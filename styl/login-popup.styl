@@ -1,0 +1,49 @@
+@import '_header'
+@import '../common/styles/_popup'
+@import '../common/styles/_field'
+force-device='mobile'
+#login-popup, #forgot-password1-popup, #forgot-password2-popup, #email-not-found-popup
+	.field
+		field()
+force-device=null
+#login-popup, #forgot-password1-popup, #forgot-password2-popup, #email-not-found-popup
+	*
+		box-sizing border-box
+	p:not(.error)
+		font-weight bold
+		text-align center
+		margin 0 0 30px 0
+	.facebook
+		display block
+		width 242px
+		height 37px
+		margin-bottom 20px
+		background-image url(../common/images/facebook-login.png)
+		font-size 0
+	.error
+		color #d0021b
+	p
+		font-weight bold
+		text-align center
+		margin 0 0 30px 0
+		font-size 14.5px
+		line-height normal
+	label
+		font-family 'Mission Gothic'
+		font-weight normal
+	input[type="submit"], input[type="button"]
+		button()
+		marign-top 10px
+	.field
+		margin-bottom 10px
+
+#login-popup
+	&:not(.invalid-auth) .invalid-auth
+	&:not(.unknown-error) .unknown-error
+		display none
+	.forgot-your-password
+		display block
+		margin-top 10px
+		font-size 14.5px
+		font-weight bold
+		text-align center

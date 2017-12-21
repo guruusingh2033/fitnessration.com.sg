@@ -1,0 +1,6 @@
+{
+    "require": {
+        "michelf/php-markdown": "^1.6",
+        "phpmailer/phpmailer": "^5.2"
+    }
+}

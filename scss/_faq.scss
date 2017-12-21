@@ -1,0 +1,78 @@
+/* FAQ page 
+************************************************/
+
+.faqpage {
+
+	#faq .intro {
+		padding-top: 73px;
+		background: url('../images/iconfaq-orange.svg') top center no-repeat;
+		background-size: 60px 60px;
+	}
+
+	main > section section {
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
+}
+
+
+/* Desktop only 
+************************************************/
+
+@media screen and (min-width:960px) {
+
+	.faqpage {
+
+		main > section {
+			position: relative;
+		}
+
+
+		h2 {
+			margin-bottom: 40px;
+			text-align: left;
+		}
+
+		.select {
+			position: absolute;
+			top: 110px;
+			right: 0;
+		}
+		
+		.column {
+			float: left;
+
+			&:first-of-type {
+				margin-right: 20px;
+			}
+		}
+	}
+}
+
+
+/* Mobile 
+************************************************/
+
+@media screen and (max-width:959px) {
+
+	.faqpage {
+
+		#faq .intro {
+			padding-top: 53px;
+			background-size: 40px 40px;
+		}
+		
+		main > section section {
+			padding-bottom: 0;
+		}
+
+		h2 {
+			margin-bottom: 30px;
+		}
+
+		.select {
+			width: 100%;
+			margin-bottom: 5px;
+		}
+	}
+}

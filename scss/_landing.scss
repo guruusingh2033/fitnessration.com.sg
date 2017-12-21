@@ -1,0 +1,208 @@
+/* Landing page 
+************************************************/
+
+html, body.landingpage {
+	height: 100%;
+}
+
+body.landingpage {
+	width: 100%;
+	overflow-x: hidden;
+}
+
+.landingpage {
+	
+	/* elements */
+
+	.button-line, .button-fill {
+		float: left;
+		margin-top: 30px;
+	}
+
+	.rectangle-buttons {
+		width: 595px;
+		margin: 0 auto;
+	}
+
+	.button-rect-icon {
+		float: left;
+
+		&:first-child {
+			margin-right: 15px;
+		}
+
+		&.fresh {
+			background-image: url('../images/iconfresh.svg');
+		}
+
+		&.freezer {
+			background-image: url('../images/iconfridge.svg');
+		}
+	}
+
+	.button-sq-icon {
+		float: left;
+		margin-right: 22px;
+
+		&.meal {
+			background-image: url('../images/iconroll-orange.svg');
+
+			span:first-child {
+				word-spacing: 138px;
+			}
+		}
+
+		&.gender {
+			background-image: url('../images/iconfemale-orange.svg');
+		}
+	}
+
+
+	/* main */
+
+	#landing {
+		height: calc(100% - 95px);
+		min-height: 500px;
+
+		.play {
+			margin-right: 20px;
+			font-size: 0;
+			background: url('../images/iconplay.png') center center no-repeat;
+		}
+
+		.scroll {
+			bottom: 55px;
+		}
+	}
+
+	main > section:nth-of-type(2n) {
+		@include bgfullwidth(background-color, $peachdk);
+	}
+
+	#stroll {
+
+		h2 {
+			margin-bottom: 40px;
+		}
+
+		p {
+			margin-bottom: 55px;
+			text-align: center;
+		}
+	}
+
+	#community {
+		.card-3col {
+
+			h5 {
+				font-size: 14px;
+				line-height: 20px;
+				font-weight: 700;
+			}
+
+			span {
+				display: block;
+				font-family: $missiongothic;
+				font-size: 11px;
+				line-height: 14px;
+			}
+		}
+	}
+
+	#hype {
+		.card-4col {
+			font-size: 15px;
+			line-height: 19px;;
+
+			a {
+				display: block;
+				color: $orange;
+				
+				&:after {
+					content: ' >>';
+				}
+			}
+		}
+	}
+}
+
+/* Mobile
+************************************************/
+
+@media screen and (max-width:959px) {
+
+	.landingpage {
+
+		/* elements */
+
+		.rectangle-buttons {
+			width: 100%;
+
+			.button-rect-icon {
+				width: calc(100% - 104px);
+				margin-right: 0;
+				margin-bottom: 10px;
+			}
+		}
+
+		.button-sq-icon {
+			margin-right: 14px;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+
+		/* main */
+
+		#landing {
+			height: calc(100% - 60px);
+
+			.intro {
+				width: 290px;
+				margin: 0 auto;
+				top: 50%;
+				@include transform(translate(-50%, -50%));
+			}
+
+			.play {
+				margin-right: 14px;
+				background-size: 15px 18px;
+			}
+		}
+
+		#stroll {
+
+			h2 {
+				margin-bottom: 35px;
+
+				em {
+					margin-bottom: 20px;
+				}
+			}
+
+			p {
+				margin-bottom: 30px;
+				text-align: left;
+			}
+		}
+
+		#community .card-3col {
+			
+			h5 {
+				font-size: 18px;
+				line-height: 26px;
+			}
+
+			span {
+				font-size: 14px;
+				line-height: 18px;
+			}
+		}
+
+		#hype .card-4col {
+			font-size: 14px;
+			line-height: 18px;
+		}
+	}
+}

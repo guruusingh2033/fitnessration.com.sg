@@ -1,0 +1,54 @@
+
+/* Nutrition page 
+************************************************/
+
+.nutritionpage {
+	table {
+		width: 100%;
+		table-layout: fixed;
+
+	}
+
+	table.large th, table.large td {
+		width: 184px;
+	}
+
+	#nutrition .intro {
+		padding-top: 73px;
+		background: url('../images/iconnutrition-orange.svg') top center no-repeat;
+		background-size: 69px 60px;
+	}
+
+	.icon {
+		height: 39px;
+		font-size: 0;
+		line-height: 0;
+		background-position: 43px center;
+		background-repeat: no-repeat;
+		background-size: 35px 35px;
+		@include backgroundimagecolors(('000000':'6A6A6A'));
+	}
+}
+
+
+/* Mobile 
+************************************************/
+
+@media screen and (max-width:959px) {
+
+	.nutritionpage {
+		table {
+			width: auto;
+			table-layout: auto;
+		}
+		#nutrition .intro {
+			padding-top: 53px;
+			background-size: 46px 40px;
+		}
+
+		.icon {
+			background-position: 22px center;
+			background-size: 27px 27px;
+		}
+	}
+}

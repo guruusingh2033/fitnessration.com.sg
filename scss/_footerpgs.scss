@@ -1,0 +1,174 @@
+/* Footer pages 
+************************************************/
+
+.businesspage, .careerpage, .termspage {
+
+	h1 {
+		color: $peach;
+	}
+
+	h2 {
+		margin-bottom: 30px;
+	}
+
+	h3 {
+		font-size: 30px;
+		line-height: 46px;
+		font-weight: 700;
+		text-align: center;
+		margin-bottom: 27px;
+	}
+
+	h4 {
+		font-size: 24px;
+		line-height: 30px;
+		font-weight: 700;
+		margin-bottom: 7px;
+	}
+
+	p a {
+		color: $orange;
+	}
+
+	section.title {
+		height: 200px;
+		background-color: $greydk;
+	
+		.intro {
+			width: 940px;
+		}
+	}
+
+	main > section:not(.title) {
+		padding: 60px 0;
+	}
+}
+
+/* career page */
+
+.careerpage {
+
+	main {
+
+		& > section:nth-of-type(n+3), & > section section {
+			padding-top: 40px;
+			@include bgfullwidth(border-top, 1px solid $greylt3);
+		}
+
+		& > section section {
+			margin-top: 30px;
+		}
+	}
+
+	.position {
+		float: left;
+		width: 460px;
+
+		&:nth-of-type(2n+1) {
+			margin-right: 20px;
+		}
+
+		&:first-of-type:last-of-type {
+			float: none;
+			margin: 0 auto;
+		}
+	}
+}
+
+/* terms page */
+
+.termspage #tandc div {
+	float: left;
+	width: 460px;
+
+	&:first-of-type {
+		margin-right: 20px;
+	}
+}
+
+
+/* Desktop only 
+************************************************/
+
+@media screen and (min-width:960px) {
+	
+	/* business page */
+
+	.businesspage form {
+
+		label[for="email"], input[name="email"], label[for="contactnumber"], input[name="contactnumber"], label[for="upload"], button[name="upload"] {
+			@include transform(translateY(65px));
+		}
+	}
+}
+
+
+/* Mobile 
+************************************************/
+
+@media screen and (max-width:959px) {
+
+	.businesspage, .careerpage, .termspage {
+
+		h3 {
+			font-size: 18px;
+			line-height: 30px;
+			margin-bottom: 5px;
+		}
+		
+		h4 {
+			font-size: 16px;
+			margin-bottom: 0;
+		}
+
+		section.title {
+			height: 130px;
+		
+			.intro {
+				width: 290px;
+				top: 28px;
+			}
+		}
+
+		main > section:not(.title) {
+			padding: 30px 0;
+		}
+
+		section section {
+			padding-top: 30px;
+		}
+	}
+
+	/* business page */
+
+	.businesspage section.title {
+		height: 100px;
+	}
+
+	/* career page */
+
+	.careerpage {
+		
+		h3 {
+			text-align: left;
+		}
+
+		.position {
+			width: 100%;
+
+			&:nth-of-type(2n+1), &:first-of-type:last-of-type {
+				margin: 0;
+			}
+		}
+	}
+
+	/* terms page */
+
+	.termspage #tandc div {
+		width: 100%;
+
+		&:first-of-type {
+			margin-right: 0;
+		}
+	}
+}
